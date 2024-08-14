@@ -341,7 +341,7 @@ def add_line_to_plot(fig_with_asteroid, df_with_coords_and_color):
     fig_with_asteroid.add_traces(list(px.line_3d(df_with_coords_and_color, x = 'x',y = 'y', z='z',color = 'bestfit', height = 500, width = 500).select_traces()))
     return fig_with_asteroid
 
-def calculate_angular_velocity(lsf_params, pixelscale, frametime, round_to = 10):
+def calculate_angular_velocity(lsf_params, pixscale, frametime, round_to = 10):
     # optimal slope multiplied by pixel scale and divided by frame time
     calculated_v = round((np.linalg.norm(lsf_params[0][1:])/lsf_params[0][0])*(pixelscale/frametime),round_to)
     input_v = wasteroid*moverate

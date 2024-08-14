@@ -73,14 +73,12 @@ ndata = np.where(refmask == 1, np.nan, data)
 # exec setup #############################################################
 moverate = 10
 wasteroid = 0.010996
-t_1 = 2.775
 hdu = fits.open(ippath)
 frames = hdu[1].shape[1]
 hdu.close()
-pixelscale = 0.11
-base = 416
 
-# runpip setup ##########################################################
+
+# analysis setup ##########################################################
 
 # reuse = 1
 # ep = 5
@@ -96,3 +94,6 @@ reuse = 1
 ep = 5
 core = np.around(2.5 * np.pi * (ep**2) * 0.7).astype(int)
 span = 1
+pixelscale = 0.11
+base = 416
+t_1 = 2.775
