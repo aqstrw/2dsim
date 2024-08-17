@@ -11,7 +11,7 @@ Code execution steps: (assuming mirisim has been installed and setup, assuming j
     Update the' velocity-determination.ipynb' notebook
 
         correct ippath (directory of outpit from mirisim) and 'ipname' (indicating the exact output to use) in cell2 based on mirisim output you want to use
-        In cell 4, update maskrefpath to a relevant refmask for the mirifov in your local miri crds, our simulations use ' … /crds/references/jwst/miri/jwst_miri_mask_0023.fits' and the 'do not use' flagged pixels where bit 0 is set are all filled with nan values
+        In cell 4, update maskrefpath to a relevant refmask for the mirifov in your local miri crds, our simulations use ' … /crds/references/jwst/miri/jwst_miri_mask_0023.fits' and the 'do            not use' flagged pixels where bit 0 is set are all filled with nan values
 
     Run all cells till the text cell that says 'basic fit'
     After that chose to run the cells for the velocities you wish to evaluate, a new velocity will produce a new simulation and hence take some time
